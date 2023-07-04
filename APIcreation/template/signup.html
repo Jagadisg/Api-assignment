@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/login/signup" method="POST">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="usename" required/><br><br>
+        <label for="pass">password</label>
+        <input type="password" name="password" id="pass" required/><br><br>
+        <label for="pass1">re-enter password</label>
+        <input type="password" name="password1" id="pass1" required/><br><br>
+        <button type="submit">signup</button><br><br>
+        {% if data %}
+        <p>{{ data.message }}</p>
+        {% endif %}
+  </form>
+</body>
+</html>
